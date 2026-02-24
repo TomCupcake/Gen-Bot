@@ -257,9 +257,13 @@ async def leave_setup(interaction: discord.Interaction, channel: discord.TextCha
     bot.config[guild_id]['leave'] = channel.id
     bot.save_data()
     await interaction.response.send_message(f"ערוץ עזיבות הוגדר: {channel.mention}", ephemeral=True)
-
 if __name__ == "__main__":
     keep_alive()
 
-    bot.run('discordkey')
+    token = os.getenv("discordkey")
+
+    if not token:
+        raise ValueError("discordkey environment variable not found")
+
+    bot.run(token)
 
