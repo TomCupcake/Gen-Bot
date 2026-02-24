@@ -261,4 +261,5 @@ async def leave_setup(interaction: discord.Interaction, channel: discord.TextCha
 if __name__ == "__main__":
     keep_alive()
 
-    bot.run('MTQ3NTA5MzY3MzUxNDM2OTA4NA.GG8K7t.qwowGZdkpctMa_vM95-MzEzUjDQUFyFzOp7fnk')
+    bot.run('discordkey')
+
